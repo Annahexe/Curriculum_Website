@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Contacto</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <script src="modernizr.js"></script>
+    <link rel="icon" type="image/x-icon" href="./Imagenes/favicon.ico" />
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <nav>
+        <div class="logo">
+          <a href="./index.html"> <span class="gris">&#60;</span><span class="logoTexto"> Annamaria Marino </span><span class="gris">/&#62;</span> </a>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./curriculum.html">Currículum</a></li>
+            <li><a class="active" href="./contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="cover">
+        <h1>Contacto</h1>
+      </section>
+      <div class="card_background">
+        <div class="wrapper_flex">
+          <section class="contact">
+            <div class="contenedor">
+              <h2>Ponte en Contacto</h2>
+              <form name="contact_form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="c9035bac-71b3-46fa-83c4-bd24d9d02f3d" />
+                <fieldset>
+                  <label class="input_area" for="nombre">
+                    <input type="text" name="nombre" required />
+                    <span class="placeholder">Nombre</span>
+                  </label>
+
+                  <label class="input_area" for="email" id="email">
+                    <input type="email" name="email" required />
+                    <span class="placeholder">Correo Electrónico</span>
+                  </label>
+
+                  <label class="input_area" for="asunto" id="asunto">
+                    <input type="text" name="asunto" required />
+                    <span class="placeholder">Asunto</span>
+                  </label>
+
+                  <label class="input_area" for="mensaje" id="mensaje">
+                    <textarea type="text" name="mensaje" required></textarea>
+                    <span class="placeholder">Mensaje</span>
+                  </label>
+
+                  <div class="button-container">
+                    <input type="submit" id="submit" name="enviar" value="Enviar Mensaje →" class="button" />
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </section>
+          <section class="contact-details">
+            <address>
+              <ul class="iconos-vertical">
+                <li>
+                  <img src="./Imagenes/email.svg" alt="Email" />
+                  <p>annamaria.marino.dev@gmail.com</p>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="./Imagenes/web.svg" alt="Sitio web" class="icon" />
+                    <p>miweb.com</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/annamaria-marino/" target="_blank">
+                    <img src="./Imagenes/linkedin.svg" alt="LinkedIn" />
+                    <p>linkedin.com/in/annamaria-marino</p>
+                  </a>
+                </li>
+              </ul>
+            </address>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <address>
+        <ul class="iconos-linea">
+          <li>
+            <img src="./Imagenes/email.svg" alt="Email" />
+            <p>annamaria.marino.dev@gmail.com</p>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/annamaria-marino/" target="_blank"
+              ><img src="./Imagenes/linkedin.svg" alt="LinkedIn" />
+              <p>Mi LinkedIn</p></a
+            >
+          </li>
+          <li>
+            <a href="#">
+              <img src="./Imagenes/web.svg" alt="Sitio web" class="icon" />
+              <p>miweb.com</p>
+            </a>
+          </li>
+        </ul>
+      </address>
+      <p>&copy 2025 - Annamaria Marino.</p>
+    </footer>
+  </body>
+</html>

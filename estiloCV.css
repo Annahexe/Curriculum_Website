@@ -1,0 +1,167 @@
+.cv-sidebar {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.cv-container {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+.cv-main {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    border-left:2px solid rgba(255, 255, 255, 0.3);
+    padding-left: 2rem;
+}
+
+
+.profile-photo {
+    border: .5rem solid #8b44b4;
+    border-radius: 50%;
+    height: auto;
+    max-width: 250px;
+    width: 100%;
+}
+
+.contenedor-photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dev-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+  
+  .dev-icons > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.dev-icons i {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+  
+.dev-icons p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.hobbies li,
+.dev-icons li {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+  
+  .dev-icons li:hover,
+  .hobbies li:hover{
+    color: #b057eb;
+    transform: scale(1.1);
+}
+
+
+.timeline {
+    position: relative;
+    margin-left: 1.75rem;     /* espacio para la línea */
+    padding-left: 1.30rem;
+    border-left: 2px solid #b057eb;
+    list-style: none;
+  }
+
+  .timeline li {
+    position: relative;
+    margin-bottom: 2.5rem;
+  }
+  
+  /* círculo */
+  .timeline > li::before {
+    content: "";
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50%;
+    border: 4px solid #58677c;
+    background: white;
+    position: absolute;
+    left: -1.8rem;
+    top: 0.3rem;
+  }
+  
+h3{
+    margin: 0;
+}
+.company{
+    color: #58677c;
+}
+time{
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+.highlights    { 
+    margin-top: .5rem; 
+    list-style: disc inside;
+    padding-left: 1.25rem; 
+}
+.highlights li { 
+    display: list-item;  
+    margin-bottom: .4rem; }
+
+#nombre{
+      text-transform: uppercase;
+      font-size: 2rem;
+}
+
+.cover--column {
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.contactos ul, .languages ul, .courses ul, .skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contactos li, .languages li, .skills li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.languages .flag {
+  width: 24px;
+  height: auto;
+  border-radius: 3px;
+}
+
+.courses li {
+  margin-bottom: 1rem;
+}
+
+.courses p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.hobbies h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.hobbies .dev-icons {
+  justify-content: center; 
+  gap: 1rem;
+}
+
+.hobbies .dev-icons li {
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
