@@ -18,6 +18,7 @@
         <div class="menu">
           <ul>
             <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./portfolio.html">Portfolio</a></li>
             <li><a href="./curriculum.html">Currículum</a></li>
             <li><a class="active" href="./contacto.html">Contacto</a></li>
           </ul>
@@ -89,12 +90,14 @@
           <li>
             <a href="./contacto.html">
               <img src="./Assets/Icons/email.svg" alt="Email" />
-              <p>annamaria.marino.dev@gmail.com</p></a>
+              <p>annamaria.marino.dev@gmail.com</p></a
+            >
           </li>
           <li>
             <a href="https://www.linkedin.com/in/annamaria-marino/" target="_blank"
               ><img src="./Assets/Icons/linkedin.svg" alt="LinkedIn" />
-              <p>Mi LinkedIn</p></a>
+              <p>Mi LinkedIn</p></a
+            >
           </li>
           <li>
             <a href="https://annahexe.github.io/Curriculum_Website/">
@@ -104,7 +107,10 @@
           </li>
         </ul>
       </address>
-      <p>&copy; 2026 - Annamaria Marino.</p>
+      <p>&copy; <span id="year"></span> - Annamaria Marino.</p>
     </footer>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>

@@ -21,6 +21,7 @@
             <li>
               <a class="active" href="./index.html">Inicio</a>
             </li>
+            <li><a href="./portfolio.html">Portfolio</a></li>
             <li><a href="./curriculum.html">Currículum</a></li>
             <li><a href="./contacto.html">Contacto</a></li>
           </ul>
@@ -82,7 +83,10 @@
           </li>
         </ul>
       </address>
-      <p>&copy; 2026 - Annamaria Marino.</p>
+      <p>&copy; <span id="year"></span> - Annamaria Marino.</p>
     </footer>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
