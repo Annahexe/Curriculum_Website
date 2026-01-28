@@ -1,27 +1,27 @@
 @font-face {
     font-family: "Lato";
-    src: url("Fonts/Lato-Regular.ttf");
+    src: url("/Assets/Fonts/Lato-Regular.ttf");
     font-weight: 400;
     font-style: normal;
   }
   
   @font-face {
     font-family: "Lato";
-    src: url("Fonts/Lato-Italic.ttf");
+    src: url("/Assets/Fonts/Lato-Italic.ttf");
     font-weight: 400;
     font-style: italic;
   }
   
   @font-face {
     font-family: "Lato";
-    src: url("Fonts/Lato-Bold.ttf");
+    src: url("/Assets/Fonts/Lato-Bold.ttf");
     font-weight: 700;
     font-style: normal;
   }
 
 @font-face {
     font-family: "Agustina";
-    src: url("Fonts/Agustina.otf");
+    src: url("/Assets/Fonts/Agustina.otf");
 }
 
 *, *::before, *::after {
@@ -33,7 +33,7 @@ body{
     color: white;
     font-family: Lato;
     font-size: 18px;
-    background-image: url("./Imagenes/background.png");
+    background-image: url("/Assets/Images/background.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
