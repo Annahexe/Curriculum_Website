@@ -20,6 +20,8 @@ export function initConway() {
     glider: document.getElementById("btnCreateGlider"),
   };
 
+  ui.overlay = document.getElementById("golOverlay");
+
   // =========================
   // 2) Config + state
   // =========================
@@ -63,10 +65,36 @@ export function initConway() {
   // 4) Patterns
   // =========================
   const PATTERNS = {
-    blinker: [[-1, 0], [0, 0], [1, 0]],
-    toad: [[-1, 0], [0, 0], [1, 0], [0, -1], [1, -1], [2, -1]],
-    beacon: [[0, 0], [1, 0], [0, -1], [1, -1], [-2, -2], [-3, -2], [-2, -3], [-3, -3]],
-    glider: [[0, 0], [1, 0], [2, 0], [2, -1], [1, -2]],
+    blinker: [
+      [-1, 0],
+      [0, 0],
+      [1, 0],
+    ],
+    toad: [
+      [-1, 0],
+      [0, 0],
+      [1, 0],
+      [0, -1],
+      [1, -1],
+      [2, -1],
+    ],
+    beacon: [
+      [0, 0],
+      [1, 0],
+      [0, -1],
+      [1, -1],
+      [-2, -2],
+      [-3, -2],
+      [-2, -3],
+      [-3, -3],
+    ],
+    glider: [
+      [0, 0],
+      [1, 0],
+      [2, 0],
+      [2, -1],
+      [1, -2],
+    ],
   };
 
   const stampPattern = (name, x, y) => {
@@ -84,7 +112,10 @@ export function initConway() {
   const getRandomSpawn = (name) => {
     const cells = PATTERNS[name];
 
-    let minX = 0, minY = 0, maxX = 0, maxY = 0;
+    let minX = 0,
+      minY = 0,
+      maxX = 0,
+      maxY = 0;
     for (const [dx, dy] of cells) {
       if (dx < minX) minX = dx;
       if (dy < minY) minY = dy;
@@ -94,8 +125,8 @@ export function initConway() {
 
     const xMin = -minX;
     const yMin = -minY;
-    const xMax = (cols - 1) - maxX;
-    const yMax = (rows - 1) - maxY;
+    const xMax = cols - 1 - maxX;
+    const yMax = rows - 1 - maxY;
 
     return {
       x: xMin + randomInt(Math.max(1, xMax - xMin + 1)),
@@ -169,9 +200,21 @@ export function initConway() {
     };
   };
 
+  const showOverlay = () => {
+    ui.overlay?.classList.add("is-visible");
+  };
+
+  const hideOverlay = () => {
+    ui.overlay?.classList.remove("is-visible");
+  };
+
   const setRunning = (v) => {
     running = v;
     if (ui.toggle) ui.toggle.textContent = running ? "Pausa" : "Start";
+
+    if (running) {
+      hideOverlay();
+    }
   };
 
   const beginPlacing = (name) => {
@@ -291,4 +334,6 @@ export function initConway() {
 
   window.addEventListener("resize", resizeCanvasToCSS);
   resizeCanvasToCSS();
+
+  showOverlay();
 }
