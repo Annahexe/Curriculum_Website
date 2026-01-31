@@ -286,6 +286,19 @@ export function initConway() {
   ui.clear?.addEventListener("click", () => clear());
   ui.speed?.addEventListener("input", () => (fps = Number(ui.speed.value)));
 
+  const startFromOverlay = () => {
+    if (!running) setRunning(true);
+  };
+
+  ui.overlay?.addEventListener("pointerdown", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    startFromOverlay();
+  });
+  canvas.addEventListener("pointerdown", () => {
+    if (ui.overlay?.classList.contains("is-visible")) startFromOverlay();
+  });
+
   window.addEventListener("keydown", (e) => {
     if (e.code === "Space") {
       e.preventDefault();
@@ -293,7 +306,6 @@ export function initConway() {
     }
   });
 
-  // Main loop
   const loop = (ts) => {
     requestAnimationFrame(loop);
     if (!running) return;
