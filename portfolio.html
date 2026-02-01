@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Proyectos</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <script src="./js/modernizr.js"></script>
+    <link rel="icon" type="image/x-icon" href="./Assets/Icons/favicon.ico" />
+    <link rel="stylesheet" href="./css/estilos.css" />
+    <link rel="stylesheet" href="./css/stylePortfolio.css" />
+    <script src="https://kit.fontawesome.com/1118bd48a1.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header class="navbar">
+      <nav>
+        <div class="logo">
+          <a href="./index.html"> <span class="gris">&#60;</span><span class="logoTexto"> Annamaria Marino </span><span class="gris">/&#62;</span> </a>
+        </div>
+        <div class="menu">
+          <ul>
+            <li>
+              <a href="./index.html">Inicio</a>
+            </li>
+            <li><a class="active" href="./portfolio.html">Portfolio</a></li>
+            <li><a href="./curriculum.html">Currículum</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="wrapper">
+      <section class="cover">
+        <div>
+          <h1>Portfolio</h1>
+          <p>Desarrolladora junior apasionada por la tecnología y el aprendizaje continuo.</p>
+          <p>Trabajo con JavaScript, Java, React, Python, C#, Unity, HTML, CSS, y destaco por mi orientación al usuario.</p>
+          <div class="buttons">
+            <a class="button" href="#proyectos">Ver proyectos</a>
+            <a class="button" href="./contacto.html">Contactar</a>
+          </div>
+        </div>
+        <div id="container3D" aria-label="Escena 3D decorativa">
+          <div class="sceneControls" aria-label="Controles de la escena 3D">
+            <button class="btn btn--small btn--ghost" id="toggleParticles" type="button" title="Alterna entre geometría y partículas (atajo: tecla P)">
+              Ver partículas
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="proyectos" class="section">
+        <h2>Proyectos</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>File Explorer</h3>
+            <img src="https://res.cloudinary.com/dwm2oprta/image/upload/v1769983960/fileExplorerThumbnail2_yas7cl.png" alt="File Explorer Thumbnail" class="project-thumb" />
+            <p>Aplicación de escritorio en Java Swing para explorar, gestionar y editar archivos y textos.</p>
+            <div class="tags"><span>Java</span><span>Swing</span></div>
+            <div class="links">
+              <a href="https://github.com/Annahexe/Java_FileExplorer" target="_blank">Código</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Gestos y poses con Python</h3>
+
+            <video class="project-video" controls muted poster="https://res.cloudinary.com/dwm2oprta/image/upload/v1769978070/ThumbThumbNail2_tbobof.png" width="310px">
+              <source src="https://res.cloudinary.com/dwm2oprta/video/upload/v1769977607/hand_vn1uwa.mp4" type="video/mp4" />
+            </video>
+            <p>Muestra detección en tiempo real de gestos, rostros y poses con Python, OpenCV y MediaPipe.</p>
+            <div class="tags"><span>Python</span><span>OpenCV</span><span>Mediapipe</span></div>
+            <div class="links">
+              <a href="https://github.com/Annahexe/Python_MediaPipe" target="_blank">Código</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Unity Flappy Fish</h3>
+            <a href="https://annahexe.github.io/Unity_FlappyFish/" target="_blank"><img src="https://res.cloudinary.com/dwm2oprta/image/upload/v1769726630/flappyFish_cover_jutobe.png" alt="Flappy Fish cover"" class="project-thumb" /></a>
+
+            <p>Un juego ligero de Unity WebGL inspirado en Flappy Bird, protagonizado por un pez.</p>
+            <div class="tags"><span>Unity</span><span>C#</span><span>WebGL</span></div>
+            <div class="links">
+              <a href="https://annahexe.github.io/Unity_FlappyFish/" target="_blank">Demo</a>
+              <a href="https://github.com/Annahexe/Unity_FlappyFish" target="_blank">Código</a>
+            </div>
+          </article>
+        </div>
+
+        <article class="card card--wide" id="conway">
+          <div class="card__header">
+            <div>
+              <h3>Conway's Game of Life 🌱</h3>
+              <p class="muted">Autómata celular clásico. Click para dibujar, Space para pausar.</p>
+            </div>
+            <div class="conway__controls" aria-label="Controles del juego">
+              <button class="btn btn--small" id="golToggle" type="button">Start</button>
+              <button class="btn btn--small btn--ghost" id="golRandom" type="button">Random</button>
+              <button class="btn btn--small btn--ghost" id="golClear" type="button">Clear</button>
+              <label class="conway__speed">
+                <span>Speed</span>
+                <input id="golSpeed" type="range" min="1" max="30" value="12" />
+              </label>
+            </div>
+          </div>
+          <div class="conway__wrap">
+            <canvas id="golCanvas" width="960" height="360" aria-label="Canvas del Juego de la Vida"></canvas>
+
+            <div class="golOverlay" id="golOverlay">
+              <div class="golOverlay__card">
+                <div class="golOverlay__title">Press <kbd>Space</kbd> to start</div>
+                <div class="golOverlay__title">▶</div>
+              </div>
+            </div>
+
+            <div class="conway__hint">
+              <span><kbd>Click</kbd> pinta/borra</span>
+              <span><kbd>Shift</kbd> + <kbd>drag</kbd> pinta</span>
+              <span><kbd>Space</kbd> pausa/reanuda</span>
+            </div>
+            <div class="conway__controls conway__patterns" aria-label="Patrones">
+              <button id="btnCreateBlinker" class="btn btn--small btn--ghost" type="button">Add Blinker</button>
+              <button id="btnCreateToad" class="btn btn--small btn--ghost" type="button">Add Toad</button>
+              <button id="btnCreateBeacon" class="btn btn--small btn--ghost" type="button">Add Beacon</button>
+              <button id="btnCreateGlider" class="btn btn--small btn--ghost" type="button">Add Glider</button>
+
+              <label class="switch">
+                <input id="golPlaceMode" type="checkbox" checked />
+                <span class="switch__track" aria-hidden="true"></span>
+                <span class="switch__label">Place on click</span>
+              </label>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section id="skills" class="section">
+        <h2>Skills</h2>
+        <div class="grid grid--2">
+          <div class="card">
+            <h3>Técnicas</h3>
+            <ul>
+              <li>JavaScript / HTML5 / CSS3</li>
+              <li>React</li>
+              <li>Java / Python</li>
+              <li>C# / Unity</li>
+              <li>Node.js </li>
+              <li>SQL</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Otras</h3>
+            <ul>
+              <li>Enfoque en experiencia de usuario (UX)</li>
+              <li>Análisis de incidencias y resolución de problemas</li>
+              <li>Testing, QA y validación de errores</li>
+              <li>Trabajo con equipos de desarrollo</li>
+              <li>Uso de herramientas CRM y entornos digitales</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="contacto" class="section">
+        <a href="./contacto.html" class="button">Ponte en Contacto</a>
+      </section>
+    </main>
+
+    <footer>
+      <address>
+        <ul class="iconos-linea">
+          <li>
+            <a href="./contacto.html">
+              <img src="./Assets/Icons/email.svg" alt="Email" />
+              <p>annamaria.marino.dev@gmail.com</p></a
+            >
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/annamaria-marino/" target="_blank"
+              ><img src="./Assets/Icons/linkedin.svg" alt="LinkedIn" />
+              <p>Mi LinkedIn</p></a
+            >
+          </li>
+          <li>
+            <a href="https://annahexe.github.io/Curriculum_Website/">
+              <img src="./Assets/Icons/web.svg" alt="Sitio web" class="icon" />
+              <p>Mi web</p>
+            </a>
+          </li>
+        </ul>
+      </address>
+      <p>&copy; <span id="year"></span> - 👩‍💻 Annamaria Marino.</p>
+    </footer>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

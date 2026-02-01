@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio | CV</title>
-    <link rel="stylesheet" href="normalize.css" />
-    <script src="modernizr.js"></script>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <script src="./js/modernizr.js"></script>
     <link rel="icon" type="image/x-icon" href="./Imagenes/favicon.ico" />
     <!--https://devicon.dev/-->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    <link rel="stylesheet" href="estilos.css" />
-    <link rel="stylesheet" href="estiloCV.css" />
+    <link rel="stylesheet" href="./css/estilos.css" />
+    <link rel="stylesheet" href="./css/estiloCV.css" />
     <!--fontawesome-->
     <script src="https://kit.fontawesome.com/1118bd48a1.js" crossorigin="anonymous"></script>
   </head>
@@ -23,6 +23,7 @@
         <div class="menu">
           <ul>
             <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./portfolio.html">Portfolio</a></li>
             <li><a class="active" href="./curriculum.html">Currículum</a></li>
             <li><a href="./contacto.html">Contacto</a></li>
           </ul>
@@ -94,9 +95,9 @@
             <section class="languages">
               <h2>Idiomas</h2>
               <ul>
-                <li><img src="./Imagenes/italy.png" alt="Italiano" class="flag" /><span>Italiano</span></li>
-                <li><img src="./Imagenes/uk.png" alt="Inglés" class="flag" /><span>Inglés</span></li>
-                <li><img src="./Imagenes/spain.png" alt="Espanol" class="flag" /><span>Español</span></li>
+                <li><img src="./Assets/Icons/italy.png" alt="Italiano" class="flag" /><span>Italiano</span></li>
+                <li><img src="./Assets/Icons/uk.png" alt="Inglés" class="flag" /><span>Inglés</span></li>
+                <li><img src="./Assets/Icons/spain.png" alt="Espanol" class="flag" /><span>Español</span></li>
               </ul>
             </section>
             <section class="hobbies">
@@ -140,8 +141,7 @@
                 atractivo.
               </p>
               <p class="description">
-                🎮 Me interesa integrarme en proyectos de desarrollo de aplicaciones y videojuegos, aplicando conocimientos técnicos como JavaScript, C#,
-                Node.js, HTML, CSS, SQL y Unity.
+                🎮 Me interesa integrarme en proyectos de desarrollo de aplicaciones y videojuegos, aplicando conocimientos técnicos como JavaScript, Java, C#, React, Python, HTML, CSS, SQL y Unity.
               </p>
             </header>
 
@@ -154,12 +154,24 @@
                     <p>JavaScript</p>
                   </li>
                   <li>
+                    <i class="devicon-reactnative-original"></i>
+                    <p>React</p>
+                  </li>
+                  <li>
                     <i class="devicon-csharp-plain"></i>
                     <p>C#</p>
                   </li>
                   <li>
                     <i class="devicon-unity-plain"></i>
                     <p>Unity</p>
+                  </li>
+                  <li>
+                    <i class="devicon-java-plain"></i>
+                    <p>Java</p>
+                  </li>
+                  <li>
+                    <i class="devicon-python-plain"></i>
+                    <p>Python</p>
                   </li>
                   <li>
                     <i class="devicon-html5-plain"></i>
@@ -196,6 +208,7 @@
                       <time datetime="present">Actualidad</time>
                     </div>
                     <ul class="highlights">
+                      <li>Pruebas funcionales (QA) y integración de asistentes de IA.</li>
                       <li>Seguimiento de incidencias y análisis de datos para optimizar la experiencia del jugador y fomentar la retención.</li>
                       <li>Coordinación con equipos de desarrollo para alinear soporte, narrativa y usabilidad del producto.</li>
                       <li>Gestión de consultas en español, inglés e italiano en un entorno digital.</li>
@@ -252,7 +265,7 @@
                     </div>
                     <ul class="highlights">
                       <li>Formación técnica especializada en el desarrollo de aplicaciones para múltiples plataformas y dispositivos.</li>
-                      <li>JavaScript, Node.js, C#, Unity, HTML, CSS, SQL.</li>
+                      <li>JavaScript, React, Java, Python, Node.js, C#, Unity, HTML, CSS, SQL.</li>
                       <li>
                         Enfoque en diseño y desarrollo de interfaces funcionales, optimización de la experiencia de usuario y estructuración de bases de datos.
                       </li>
@@ -288,25 +301,28 @@
         <ul class="iconos-linea">
           <li>
             <a href="./contacto.html">
-              <img src="./Imagenes/email.svg" alt="Email" />
+              <img src="./Assets/Icons/email.svg" alt="Email" />
               <p>annamaria.marino.dev@gmail.com</p></a
             >
           </li>
           <li>
             <a href="https://www.linkedin.com/in/annamaria-marino/" target="_blank"
-              ><img src="./Imagenes/linkedin.svg" alt="LinkedIn" />
+              ><img src="./Assets/Icons/linkedin.svg" alt="LinkedIn" />
               <p>Mi LinkedIn</p></a
             >
           </li>
           <li>
             <a href="https://annahexe.github.io/Curriculum_Website/">
-              <img src="./Imagenes/web.svg" alt="Sitio web" class="icon" />
-              <p>Mi Web</p>
+              <img src="./Assets/Icons/web.svg" alt="Sitio web" class="icon" />
+              <p>Mi web</p>
             </a>
           </li>
         </ul>
       </address>
-      <p>&copy; 2025 - Annamaria Marino.</p>
+      <p>&copy; <span id="year"></span> - 👩‍💻 Annamaria Marino.</p>
     </footer>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>

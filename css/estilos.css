@@ -1,27 +1,37 @@
 @font-face {
     font-family: "Lato";
-    src: url("Fonts/Lato-Regular.ttf");
+    src: url("/Assets/Fonts/Lato-Regular.ttf");
     font-weight: 400;
     font-style: normal;
   }
   
   @font-face {
     font-family: "Lato";
-    src: url("Fonts/Lato-Italic.ttf");
+    src: url("/Assets/Fonts/Lato-Italic.ttf");
     font-weight: 400;
     font-style: italic;
   }
   
   @font-face {
     font-family: "Lato";
-    src: url("Fonts/Lato-Bold.ttf");
+    src: url("/Assets/Fonts/Lato-Bold.ttf");
     font-weight: 700;
     font-style: normal;
   }
 
 @font-face {
     font-family: "Agustina";
-    src: url("Fonts/Agustina.otf");
+    src: url("/Assets/Fonts/Agustina.otf");
+}
+
+:root{
+  --bg:#430170;
+  --text:#fff;
+  --accent-soft:#debde6;
+  --accent-deep:#725AC1;
+  --border:rgba(255,255,255,.18);
+  --card:rgba(222,189,230,.18);
+  --shadow:0 5px 15px rgba(0,0,0,.15);
 }
 
 *, *::before, *::after {
@@ -33,7 +43,7 @@ body{
     color: white;
     font-family: Lato;
     font-size: 18px;
-    background-image: url("./Imagenes/background.png");
+    background-image: url("/Assets/Images/background.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -43,6 +53,7 @@ body{
 .navbar{
     position: sticky;
     top: 0;
+      z-index: 1000; 
     background-color: rgba(67, 1, 112, 0.502);
     backdrop-filter: blur(3px);
 }
@@ -182,11 +193,21 @@ a.button:hover {
     width: 100%;
 }
 
-.card_background{
+.card_background {
     color: #430170;
     background: linear-gradient(316deg, #9c89f7 0%, #C8BFE7 74%);
     border-radius: 30px;
     margin: 0 8%;
+    box-shadow: 
+        0 8px 30px rgba(156, 137, 247, 0.4);
+
+          transition: transform 0.18s ease, box-shadow 0.18s ease;
+  will-change: transform;
+}
+
+.card:hover , .card_background:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(156, 137, 247, 0.45);
 }
 
 
@@ -225,6 +246,11 @@ footer a p{
   font-size: 16px;
 }
 
+#bottomBtn {
+  padding-top: 2%;
+  display: flex;
+  justify-content: center;
+}
 
 /* CONTACT PAGE */
 

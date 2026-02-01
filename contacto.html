@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio | Contacto</title>
-    <link rel="stylesheet" href="normalize.css" />
-    <script src="modernizr.js"></script>
-    <link rel="icon" type="image/x-icon" href="./Imagenes/favicon.ico" />
-    <link rel="stylesheet" href="estilos.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <script src="./js/modernizr.js"></script>
+    <link rel="icon" type="image/x-icon" href="./Assets/Icons/favicon.ico" />
+    <link rel="stylesheet" href="./css/estilos.css" />
   </head>
   <body>
     <header class="navbar">
@@ -18,6 +18,7 @@
         <div class="menu">
           <ul>
             <li><a href="./index.html">Inicio</a></li>
+            <li><a href="./portfolio.html">Portfolio</a></li>
             <li><a href="./curriculum.html">Currículum</a></li>
             <li><a class="active" href="./contacto.html">Contacto</a></li>
           </ul>
@@ -67,12 +68,12 @@
             <address>
               <ul class="iconos-vertical">
                 <li>
-                  <img src="./Imagenes/email.svg" alt="Email" />
+                  <img src="./Assets/Icons/email.svg" alt="Email" />
                   <p>annamaria.marino.dev@gmail.com</p>
                 </li>
                 <li>
                   <a href="https://www.linkedin.com/in/annamaria-marino/" target="_blank">
-                    <img src="./Imagenes/linkedin.svg" alt="LinkedIn" />
+                    <img src="./Assets/Icons/linkedin.svg" alt="LinkedIn" />
                     <p>linkedin.com/in/annamaria-marino</p>
                   </a>
                 </li>
@@ -87,24 +88,29 @@
       <address>
         <ul class="iconos-linea">
           <li>
-            <img src="./Imagenes/email.svg" alt="Email" />
-            <p>annamaria.marino.dev@gmail.com</p>
+            <a href="./contacto.html">
+              <img src="./Assets/Icons/email.svg" alt="Email" />
+              <p>annamaria.marino.dev@gmail.com</p></a
+            >
           </li>
           <li>
             <a href="https://www.linkedin.com/in/annamaria-marino/" target="_blank"
-              ><img src="./Imagenes/linkedin.svg" alt="LinkedIn" />
+              ><img src="./Assets/Icons/linkedin.svg" alt="LinkedIn" />
               <p>Mi LinkedIn</p></a
             >
           </li>
           <li>
             <a href="https://annahexe.github.io/Curriculum_Website/">
-              <img src="./Imagenes/web.svg" alt="Sitio web" class="icon" />
-              <p>Mi Web</p>
+              <img src="./Assets/Icons/web.svg" alt="Sitio web" class="icon" />
+              <p>Mi web</p>
             </a>
           </li>
         </ul>
       </address>
-      <p>&copy 2025 - Annamaria Marino.</p>
+      <p>&copy; <span id="year"></span> - 👩‍💻 Annamaria Marino.</p>
     </footer>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
