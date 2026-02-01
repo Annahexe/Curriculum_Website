@@ -246,6 +246,11 @@ footer a p{
   font-size: 16px;
 }
 
+#bottomBtn {
+  padding-top: 2%;
+  display: flex;
+  justify-content: center;
+}
 
 /* CONTACT PAGE */
 
