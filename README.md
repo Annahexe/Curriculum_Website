@@ -25,6 +25,7 @@ Puedes explorar mi CV en línea aquí:
 
 Este proyecto incluye:
 - Una breve presentación personal y mis competencias.
+- Un portfolio
 - Accesos directos para:
   - Contactarme por email a traves de un simple y directo formulario. 📃⬅️
   - Descargar el CV en PDF. 🗞️📎
@@ -35,12 +36,11 @@ Este proyecto incluye:
 
 ```text
 /
-├── index.html         # Página de inicio
-├── curriculum.html    # Sección del currículum
-├── contacto.html      # Sección de contacto
-├── estilos.css        # Estilos generales
-├── estiloCV.css       # Estilos específicos del CV
-├── normalize.css      # Normalización CSS
-├── modernizr.js       # Detección de características del navegador
-├── Imagenes/          # Carpeta con imágenes utilizadas en el sitio
-└── Fonts/             # Carpeta con fuentes personalizadas
+├── Assets/           # Recursos (imágenes/archivos usados por la web)
+├── css/              # Hojas de estilo del sitio
+├── js/               # Scripts JavaScript del sitio
+├── index.html        # Página de inicio
+├── curriculum.html   # Página del currículum
+├── portfolio.html    # Página de portfolio
+├── contacto.html     # Página de contacto
+└── README.md         # Documentación del proyecto
