@@ -6,6 +6,7 @@
     <title>Portfolio | Inicio</title>
     <link rel="stylesheet" href="./css/normalize.css" />
     <script src="./js/modernizr.js"></script>
+    <link rel="manifest" href="./manifest.json" />
     <link rel="icon" type="image/x-icon" href="./Assets/Icons/favicon.ico" />
     <link rel="stylesheet" href="./css/estilos.css" />
     <script src="https://kit.fontawesome.com/1118bd48a1.js" crossorigin="anonymous"></script>
@@ -90,6 +91,16 @@
     </footer>
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("./service-worker.js")
+            .then(() => console.log("✅ Service Worker registered"))
+            .catch((err) => console.log("❌ Error Service Worker:", err));
+        });
+      }
     </script>
   </body>
 </html>
